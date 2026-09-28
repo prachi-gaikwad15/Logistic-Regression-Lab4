@@ -1,51 +1,81 @@
-# Titanic Survival Prediction using Logistic Regression
+## 3. Objective
 
-## Lab 4 - Logistic Regression
+The main objectives of this practical are:
 
----
+- To understand Logistic Regression.
+- To load and explore the Titanic dataset.
+- To perform data preprocessing.
+- To select relevant features.
+- To perform train-test splitting.
+- To train a Logistic Regression model.
+- To make predictions.
+- To calculate prediction probabilities.
+- To evaluate the model using accuracy, confusion matrix and classification report.
 
-## 1. Overview
+## 4. Dataset
 
-This project is based on the implementation of a Logistic Regression machine learning model using the Titanic dataset.
+The dataset used in this practical is the Titanic dataset.
 
-The main objective of this practical is to develop a binary classification model that can predict whether a passenger survived the Titanic disaster or did not survive.
+The dataset contains passenger information and survival status.
 
-The project demonstrates the complete machine learning workflow starting from loading the dataset and understanding the data to preprocessing, feature selection, train-test splitting, model training, prediction, probability estimation, and model evaluation.
-
-Logistic Regression is used because the target variable contains two possible outcomes:
+The target variable is:
 
 - 0 - Not Survived
 - 1 - Survived
 
-The trained model is evaluated using accuracy, confusion matrix, precision, recall, F1-score, and classification report.
+Dataset file:
 
----
+`train.csv`
 
-## 2. Problem Statement
+## 5. Technologies Used
 
-The Titanic dataset contains information about passengers who travelled on the RMS Titanic.
+- Python
+- Pandas
+- NumPy
+- Matplotlib
+- Scikit-learn
+- Jupyter Notebook
+- Visual Studio Code
 
-The task is to build a machine learning classification model that can learn from passenger information and predict whether a passenger survived or did not survive.
+## 6. Machine Learning Model
 
-The problem can be represented as:
+### Logistic Regression
 
-```text
-Passenger Information
-        |
-        v
-Data Preprocessing
-        |
-        v
-Feature Selection
-        |
-        v
-Train-Test Split
-        |
-        v
-Logistic Regression
-        |
-        v
-Survival Prediction
-        |
-        v
-Model Evaluation
+Logistic Regression is a supervised machine learning algorithm used for classification problems.
+
+In this project, it is used for binary classification:
+
+- Not Survived
+- Survived
+
+## 7. Project Workflow
+
+The project follows these steps:
+
+1. Load the Titanic dataset.
+2. Understand the dataset.
+3. Perform data preprocessing.
+4. Select relevant features.
+5. Encode categorical data where required.
+6. Split the dataset into training and testing data.
+7. Train the Logistic Regression model.
+8. Make predictions.
+9. Calculate prediction probabilities.
+10. Evaluate the model.
+
+## 8. Train-Test Split
+
+The dataset was divided into:
+
+- Training Samples: 712
+- Testing Samples: 179
+
+Training data is used to train the model, while testing data is used to evaluate the model.
+
+## 9. Model Training
+
+The Logistic Regression model is trained using the training dataset.
+
+```python
+model = LogisticRegression()
+model.fit(X_train, y_train)
